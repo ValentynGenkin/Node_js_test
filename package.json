@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",
+    "mysql": "github:mysqljs/mysql",
     "uuid": "^9.0.0"
   },
   "devDependencies": {

@@ -32,13 +32,18 @@ export const postMovie = (req, res) => {
       .json({ msg: `Movie with title '${title}' already exist` });
   }
   if (!title || !director || !release_date) {
-    return res
-      .status(400)
-      .json({ msg: 'Error, all fields are required. Check request body' });
+    return res.status(400).json({
+      msg: 'Error, all fields are required. Check request body:',
+      example: {
+        title: 'title',
+        director: 'name',
+        release_date: 'YYYY-MM-DD',
+      },
+    });
   }
 
   movieList.push({ id, title, director, release_date });
-  res.status(200).json({ msg: `Movie '${title}' added with id - ${id}` });
+  res.status(201).json({ msg: `Movie '${title}' added with id - ${id}` });
 };
 
 export const getMovieByID = (req, res) => {

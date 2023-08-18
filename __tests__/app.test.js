@@ -56,7 +56,7 @@ describe('POST /movie/:id', () => {
 
     const response = await request.post('/movie').send(testData);
 
-    checkStatusAndType(response, 200, 'application/json');
+    checkStatusAndType(response, 201, 'application/json');
     expect(response.body.msg).toMatch(
       new RegExp(`Movie '${testData.title}' added with id - .+`),
     );
