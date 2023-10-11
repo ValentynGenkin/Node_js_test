@@ -9,7 +9,7 @@
   to = "/.netlify/functions/api/:splat"
 
 [build]
-  command = "npm run build" 
+  command = "netlify deploy --prod" 
   functions = "functions" 
   repository = "https://github.com/ValentynGenkin/Node_js_test.git"
 
