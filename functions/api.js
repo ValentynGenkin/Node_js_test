@@ -14,5 +14,5 @@ app.get('/', getIndexPage);
 
 app.all('/*', wrongRoute);
 
-app.use('/api/', router);
-export const handler = serverless(api);
+app.use('/.netlify/functions/api', router);
+module.exports.handler = serverless(app);
