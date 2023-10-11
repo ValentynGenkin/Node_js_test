@@ -1,7 +1,7 @@
 [functions]
   external_node_modules = ["express"]
   node_bundler = "esbuild"
-  
+
 [[redirects]]
   force = true
   from = "/api/*"
@@ -11,6 +11,9 @@
 [build]
   command = "npm run build" 
   functions = "functions" 
+  repository = "https://github.com/ValentynGenkin/Node_js_test.git"
 
 [dev]
   command = "npm run dev" 
+
+  
