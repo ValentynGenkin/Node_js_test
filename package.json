@@ -5,15 +5,18 @@
   "description": "",
   "main": "server.js",
   "scripts": {
+    "build": "netlify deploy --prod",
     "test": "jest",
-    "start": "node server.js",
+    "start": "node api.js",
     "dev": "nodemon server.js"
   },
   "author": "Valentyn Genkin",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "mysql": "github:mysqljs/mysql",
+    "serverless-http": "^3.2.0",
     "uuid": "^9.0.0"
   },
   "devDependencies": {
